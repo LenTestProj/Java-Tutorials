@@ -1,0 +1,15 @@
+// import Files.AdvCalc;
+// import Files.VeryAdvCalc;
+
+public class Hello{
+    public static void main(String args[]){
+        VeryAdvCalc obj = new VeryAdvCalc();
+        int r1 = obj.add(4, 5);
+        int r2 = obj.sub(7, 3);
+        int r3 = obj.mul(5,1);
+        int r4 = obj.div(4,2);
+        double r5 = obj.power(3, 4);
+
+        System.out.println(r1+ " "+ r2+ " " +r3+ " "+ r4+ " "+r5);
+    }
+}
