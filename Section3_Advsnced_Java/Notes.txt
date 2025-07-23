@@ -1,0 +1,5 @@
+Abstract Class
+-> Abstract class can create abstract methods and also normal methods.
+-> Abstract classes can extend another abstract class.
+-> Objects cannot be created with abstract class.
+-> Another concrete class needs to extend from abstract class and define the methods that have been declared in the abstract class.
