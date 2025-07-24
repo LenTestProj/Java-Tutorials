@@ -1,17 +1,28 @@
-class A{
-    public void show(){
-        System.out.println("In A Show");
-    }
+enum Status{
+    Running, Failed, Pending, Success
 }
+
 
 public class Demo {
     public static void main(String args[]){
-        A obj = new A(){
-            public void show(){
-                System.out.println("In New Show");
-            }
-        };
-        obj.show();
-        // obj.display();
+        Status s = Status.Success;
+        System.out.println(s.getClass());
+        switch (s) {
+            case Running:
+                System.out.println("Running");
+                break;
+            case Failed:
+                System.out.println("Failed");
+                break;
+            case Pending:
+                System.out.println("Pending");
+                break;
+            case Success:
+                System.out.println("Success");
+                break;            
+            default:
+                System.out.println("Done");
+                break;
+        }
     }
 }
