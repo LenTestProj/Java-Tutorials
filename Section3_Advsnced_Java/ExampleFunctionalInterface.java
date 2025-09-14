@@ -1,4 +1,5 @@
-public class Demo {
+
+public class ExampleFunctionalInterface {
     public static void main(String args[]){
         A obj =  new A(){
             public void show(){
