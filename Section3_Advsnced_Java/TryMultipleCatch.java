@@ -1,4 +1,4 @@
-public class Demo {
+public class TryMultipleCatch {
     public static void main(String args[]){
         int i=2;
         int j=0;
