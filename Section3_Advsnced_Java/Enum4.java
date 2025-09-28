@@ -1,3 +1,6 @@
+// import Laptop;
+
+
 enum Laptop{
     Macbook(2000), XPS(2200), Surface, ThinkPad(1800);
 
