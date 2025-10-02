@@ -1,4 +1,6 @@
-public class Demo {
+package Threads;
+
+public class ThreadSynchronize {
     public static void main(String args[]){
         Counter c = new Counter();
 

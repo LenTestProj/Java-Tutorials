@@ -1,3 +1,4 @@
+package Exceptions;
 public class ThrowsDuckingException {
     static{
         System.out.println("Class Loaded");
