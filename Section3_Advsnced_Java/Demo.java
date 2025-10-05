@@ -1,40 +1,27 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 public class Demo {
     public static void main(String args[]){
-        Counter c = new Counter();
+        List<Integer> nums = new ArrayList<Integer>() ;
+        nums.add(6); 
+        nums.add(5); 
+        nums.add(8); 
+        nums.add(2);  
 
-        Runnable obj1 = ()->{
-            for(int i=1;i<=1000;i++){
-                c.increement();
-            }
-        };
-     
-        Runnable obj2 = ()->{
-            for(int i=1;i<=1000;i++){
-                c.increement();
-            }
-        };
+        System.out.println(nums.get(2));
+        // for(int n:nums){
+        //     System.out.println(n);
+        // }
 
-       Thread t1 = new Thread(obj1);
-       Thread t2 = new Thread(obj2);
+        System.out.println("The index for the element 2 is "+nums.indexOf(2));
 
-       t1.start(); //firs tewxecutes this then the next line
-       t2.start();
-
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for(int i=0;i<nums.size();i++){
+            System.out.println("The element at position "+i+" is "+nums.get(i));
         }
-      
 
-        System.out.println(c.count);
-        }
-} 
-
-class Counter{
-    int count;
-    public synchronized void increement(){
-        count++;
+        //prints all the values
+        System.out.println(nums);
     }
-}
+} 
