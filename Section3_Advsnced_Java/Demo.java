@@ -1,27 +1,53 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 
 public class Demo {
-    public static void main(String args[]){
-        List<Integer> nums = new ArrayList<Integer>() ;
-        nums.add(6); 
-        nums.add(5); 
-        nums.add(8); 
-        nums.add(2);  
+    public static void main(String args[]){ 
+        int size = 10_000; 
+        List<Integer> nums = new ArrayList<>(size);
 
-        System.out.println(nums.get(2));
-        // for(int n:nums){
-        //     System.out.println(n);
-        // }
+        Random ran = new Random();
 
-        System.out.println("The index for the element 2 is "+nums.indexOf(2));
-
-        for(int i=0;i<nums.size();i++){
-            System.out.println("The element at position "+i+" is "+nums.get(i));
+        for(int i=1;i<size;i++){
+            nums.add(ran.nextInt(100));
         }
 
-        //prints all the values
-        System.out.println(nums);
+        // int sum1 = nums.stream().map(i->i*2).reduce(0, (c,e)->c+e);
+
+        long startSeq = System.currentTimeMillis();
+
+        int sum2 = nums.stream().map(i->{
+            try {
+                Thread.sleep(1);
+                
+            } catch (Exception e) {
+               
+            }   
+            return i*2; 
+        }).mapToInt(i->i).sum();
+
+        long endSeq = System.currentTimeMillis();
+
+
+        long startPara = System.currentTimeMillis();
+
+        int sum3 = nums.parallelStream().map(i->{
+            try {
+                Thread.sleep(1);
+                
+            } catch (Exception e) {
+               
+            }   
+            return i*2; 
+        }).mapToInt(i->i).sum();
+
+        long endPara = System.currentTimeMillis();
+        // System.out.println(sum1+" "+sum2+" "+sum3);
+
+        System.out.println("Seq : "+(endSeq-startSeq));
+
+        System.out.println("Para : "+(endPara-startPara));
     }
 } 
+
