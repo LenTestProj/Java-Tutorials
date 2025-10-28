@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class DemoJDBC {
+public class CRUD_Operations {
     public static void main(String[] args) {
         /*
             import package
@@ -13,11 +13,6 @@ public class DemoJDBC {
         */
         Connection con=null;
         try {
-            //assume data is coming from front end
-            int sid = 102;
-            String sname="Jasmine";
-            int marks = 52;
-
             String url = "jdbc:postgresql://localhost:5432/demo";
             String uname="postgres";
             String password = "root";
@@ -25,8 +20,7 @@ public class DemoJDBC {
             // String sql = "select * from student";
             // String sql = "insert into student values (5, 'John', 48)";
             // String sql = "update student set sname='Max' where sid=5";
-            // String sql = "delete from student where sid=5";
-            String sql = "insert into student values (?,?,?)";
+            String sql = "delete from student where sid=5";
 
             //loads the driver into memory
             //When the class is loaded, it registers itself automatically with the DriverManager.
@@ -35,13 +29,8 @@ public class DemoJDBC {
             //establish the connection with postgres
             con = DriverManager.getConnection(url, uname, password);
 
-            PreparedStatement st = con.prepareStatement(sql);
-            // Statement st = con.createStatement();
-            st.setInt(1, sid);
-            st.setString(2,sname);
-            st.setInt(3, marks);
-
-            st.execute();
+            Statement st = con.createStatement();
+            
             //delete document
             // st.execute(sql);
 
