@@ -4,4 +4,26 @@ public class Student {
     private int rollno;
     private String sName;
     private int sAge;
+    public int getRollno() {
+        return rollno;
+    }
+    @Override
+    public String toString() {
+        return "Student [rollno=" + rollno + ", sName=" + sName + ", sAge=" + sAge + "]";
+    }
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+    public String getsName() {
+        return sName;
+    }
+    public void setsName(String sName) {
+        this.sName = sName;
+    }
+    public int getsAge() {
+        return sAge;
+    }
+    public void setsAge(int sAge) {
+        this.sAge = sAge;
+    }
 }
