@@ -4,5 +4,13 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/telecom</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">root</property>
+    
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- create table if not exists-->
+    
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="hibernate.show_sql">true</property>  <!-- create sql queries -->
+    
+        <property name="hibernate.format_sql">true</property> <!-- format sql queries -->
     </session-factory>
 </hibernate-configuration>

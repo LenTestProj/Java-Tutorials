@@ -1,13 +1,15 @@
 package com.example;
 
-import java.lang.module.Configuration;
+// import java.lang.module.Configuration;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
 /**
  * Hello world!
@@ -18,9 +20,9 @@ public class App
     public static void main( String[] args )
     {
         Student s1 = new Student();
-        s1.setsName("Navin");
-        s1.setRollno(101);
-        s1.setsAge(30);
+        s1.setsName("Gaurav");
+        s1.setRollno(105);
+        s1.setsAge(22);
 
         // Create registry
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -29,6 +31,7 @@ public class App
 
         // Create MetadataSources
         MetadataSources sources = new MetadataSources(registry);
+        sources.addAnnotatedClass(com.example.Student.class);
 
         // Create Metadata
         Metadata metadata = sources.getMetadataBuilder().build();
@@ -40,7 +43,13 @@ public class App
         //From hibernate
         Session session = sf.openSession();
 
-        session.save(s1);
+        Transaction transaction = session.beginTransaction();
+
+        session.persist(s1);
+
+        transaction.commit();
+        session.close();
+        sf.close();
 
         System.out.println(s1);
     }
