@@ -1,20 +1,10 @@
 package com.example;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
+public class Get_vs_load {
     public static void main( String[] args )
     {
         
@@ -28,17 +18,14 @@ public class App
         //From hibernate
         Session session = sf.openSession();
 
-        Laptop l1 = session.get(Laptop.class, 2);
-        System.out.println(l1);
+        // Laptop laptop = session.get(Laptop.class, 2); //by default it is eager loading. sql query select fires immediately
+        // System.out.println(laptop.getClass());
+
+        // Laptop laptop = session.load(Laptop.class, 2); 
+        Laptop laptop = session.byId(Laptop.class).getReference(2);  //alternative to laod method
+        System.out.println(laptop.getBrand());
 
         session.close();
-
-        Session session1 = sf.openSession();
-
-        Laptop l2 = session1.get(Laptop.class, 2);
-        System.out.println(l2);
-
-        session1.close();
 
         sf.close();
     }

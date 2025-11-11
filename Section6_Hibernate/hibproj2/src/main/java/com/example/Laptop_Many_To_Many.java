@@ -2,22 +2,18 @@ package com.example;
 
 import java.util.List;
 
-import jakarta.persistence.Cacheable;
-// import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 
-// @Embeddable
-@Entity
-@Cacheable
-public class Laptop {
-    @Id
+public class Laptop_Many_To_Many {
+     @Id
     private int id;
     private String brand;
     private String model;
     private int ram;
+
+    @ManyToMany(mappedBy = "laptops")
+    private List<Alien> aliens;
 
     @Override
     public String toString() {
@@ -46,5 +42,11 @@ public class Laptop {
     }
     public void setRam(int ram) {
         this.ram = ram;
+    }
+    public List<Alien> getAliens() {
+        return aliens;
+    }
+    public void setAliens(List<Alien> aliens) {
+        this.aliens = aliens;
     }
 }

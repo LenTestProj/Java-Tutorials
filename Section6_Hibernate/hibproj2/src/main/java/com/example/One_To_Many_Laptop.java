@@ -1,23 +1,17 @@
 package com.example;
 
-import java.util.List;
-
-import jakarta.persistence.Cacheable;
-// import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
-// @Embeddable
-@Entity
-@Cacheable
-public class Laptop {
-    @Id
+public class One_To_Many_Laptop {
+   @Id
     private int id;
     private String brand;
     private String model;
     private int ram;
+
+    @ManyToOne
+    private Alien alien;
 
     @Override
     public String toString() {
@@ -47,4 +41,10 @@ public class Laptop {
     public void setRam(int ram) {
         this.ram = ram;
     }
+    public Alien getAlien() {
+        return alien;
+    }
+    public void setAlien(Alien alien) {
+        this.alien = alien;
+    } 
 }

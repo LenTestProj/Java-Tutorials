@@ -4,16 +4,9 @@ import java.util.List;
 
 import org.hibernate.annotations.ManyToAny;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
-// @Entity(name = "alien_table")
-// @Table(name="alien_table")
-
-@Entity
-public class Alien {
+public class Aliens_Many_To_Many {
     @Id
     private int aid;
 
@@ -21,8 +14,7 @@ public class Alien {
     private String aname;
     private String tech;
 
-    // @OneToMany(fetch = FetchType.EAGER)  //foreign key //alien is the name in laptop table foreign key
-    @OneToMany
+    @ManyToAny  //foreign key //alien is the name in laptop table foreign key
     private List<Laptop> laptops;
 
     public int getAid() {

@@ -1,0 +1,45 @@
+package com.example;
+
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+
+public class One_to_One_Alien {
+    @Id
+    private int aid;
+
+    // @Column(name="alien_name")
+    private String aname;
+    private String tech;
+
+    @OneToOne  //foreign key
+    private Laptop laptop;
+
+    public int getAid() {
+        return aid;
+    }
+    @Override
+    public String toString() {
+        return "Alien [aid=" + aid + ", aname=" + aname + ", tech=" + tech + ", laptop=" + laptop + "]";
+    }
+    public void setAid(int aid) {
+        this.aid = aid;
+    }
+    public String getAname() {
+        return aname;
+    }
+    public void setAname(String aname) {
+        this.aname = aname;
+    }
+    public String getTech() {
+        return tech;
+    }
+    public void setTech(String tech) {
+        this.tech = tech;
+    }
+    public Laptop getLaptop() {
+        return laptop;
+    }
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+}
