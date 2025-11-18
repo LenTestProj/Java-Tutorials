@@ -1,5 +1,5 @@
-com/telecom/Desktop.class
-com/telecom/App.class
-com/telecom/Computer.class
-com/telecom/Laptop.class
-com/telecom/Alien.class
+com\telecom\Alien.class
+com\telecom\App.class
+com\telecom\Desktop.class
+com\telecom\Laptop.class
+com\telecom\Computer.class

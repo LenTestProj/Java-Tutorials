@@ -32,7 +32,8 @@
     <!-- <bean id="alien" class="com.telecom.Alien" autowire="byName">   -->
     <bean id="alien" class="com.telecom.Alien" autowire="byType">    
         <property name="age" value="24" />
-        <property name="com" ref="com1">
+        <!-- <property name="com" ref="com1"> -->
+         <property name="com">
         <!-- inner bean only used by alien -->
             <bean id="com1" class="com.telecom.Laptop" primary="true">
             </bean>

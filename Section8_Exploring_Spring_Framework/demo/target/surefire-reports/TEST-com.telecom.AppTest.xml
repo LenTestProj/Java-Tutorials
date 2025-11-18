@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.telecom.AppTest" time="0.056" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.telecom.AppTest" time="0.08" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/test-classes:/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/classes:/home/lennon/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/lennon/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/lennon/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar:/home/lennon/.m2/repository/io/micrometer/micrometer-observation/1.14.11/micrometer-observation-1.14.11.jar:/home/lennon/.m2/repository/io/micrometer/micrometer-commons/1.14.11/micrometer-commons-1.14.11.jar:"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo\target\test-classes;c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo\target\classes;C:\Users\BEX Technologies\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\BEX Technologies\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-context\6.2.11\spring-context-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-aop\6.2.11\spring-aop-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-beans\6.2.11\spring-beans-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-core\6.2.11\spring-core-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-jcl\6.2.11\spring-jcl-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-expression\6.2.11\spring-expression-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\io\micrometer\micrometer-observation\1.14.11\micrometer-observation-1.14.11.jar;C:\Users\BEX Technologies\.m2\repository\io\micrometer\micrometer-commons\1.14.11\micrometer-commons-1.14.11.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="os.name" value="Linux"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-21.0.6-oracle-x64/lib"/>
-    <property name="sun.java.command" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/surefire/surefirebooter9757215005202152064.jar /home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/surefire 2025-11-16T11-07-59_431-jvmRun1 surefire953594542798118250tmp surefire_02395281094159371671tmp"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\BEXTEC~1\AppData\Local\Temp\surefire8439688671232886363\surefirebooter3110509521219512991.jar C:\Users\BEX Technologies\AppData\Local\Temp\surefire8439688671232886363 2025-11-18T13-54-24_821-jvmRun1 surefire15135989671067927586tmp surefire_09906021738701606208tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/test-classes:/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/classes:/home/lennon/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/lennon/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/lennon/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar:/home/lennon/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar:/home/lennon/.m2/repository/io/micrometer/micrometer-observation/1.14.11/micrometer-observation-1.14.11.jar:/home/lennon/.m2/repository/io/micrometer/micrometer-commons/1.14.11/micrometer-commons-1.14.11.jar:"/>
+    <property name="surefire.test.class.path" value="c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo\target\test-classes;c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo\target\classes;C:\Users\BEX Technologies\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\BEX Technologies\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-context\6.2.11\spring-context-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-aop\6.2.11\spring-aop-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-beans\6.2.11\spring-beans-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-core\6.2.11\spring-core-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-jcl\6.2.11\spring-jcl-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\org\springframework\spring-expression\6.2.11\spring-expression-6.2.11.jar;C:\Users\BEX Technologies\.m2\repository\io\micrometer\micrometer-observation\1.14.11\micrometer-observation-1.14.11.jar;C:\Users\BEX Technologies\.m2\repository\io\micrometer\micrometer-commons\1.14.11\micrometer-commons-1.14.11.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/lennon"/>
+    <property name="user.home" value="C:\Users\BEX Technologies"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2025-01-21"/>
-    <property name="java.home" value="/usr/lib/jvm/jdk-21.0.6-oracle-x64"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo/target/surefire/surefirebooter9757215005202152064.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\BEXTEC~1\AppData\Local\Temp\surefire8439688671232886363\surefirebooter3110509521219512991.jar"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
-    <property name="user.name" value="lennon"/>
-    <property name="stdout.encoding" value="UTF-8"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="5.15.0-161-generic"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Bex Technologies"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/lennon/.m2/repository"/>
+    <property name="localRepository" value="C:\Users\BEX Technologies\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="java.version" value="21.0.6"/>
-    <property name="user.dir" value="/home/lennon/Java/Tutorials/Section8_Exploring_Spring_Framework/demo"/>
+    <property name="java.io.tmpdir" value="C:\Users\BEXTEC~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="c:\Lennon\Java\Java-Tutorials\Section8_Exploring_Spring_Framework\demo"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\BEX Technologies\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\BEX Technologies\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\TortoiseSVN\bin;C:\Users\BEX Technologies\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\ffmpeg-6.1.1\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Program Files\mongosh;C:\Users\BEX Technologies\Ngrok;C:\Program Files\Redis;C:\Users\BEX Technologies\Redis;C:\Users\BEX Technologies\.bun\bin;C:\Program Files\Meld\;C:\Program Files (x86)\cloudflared\;C:\Program Files\Maven\apache-maven-3.9.11\bin;C:\Users\BEX Technologies\AppData\Local\Programs\Eclipse Adoptium\jdk-11.0.27.6-hotspot\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\BEX Technologies\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\BEX Technologies\AppData\Local\Programs\Python\Python313\;C:\Android_Studio\Android\Sdk\platform-tools;C:\Android_Studio\Android\Sdk\tools;C:\Users\BEX Technologies\AppData\Local\jdk-11.0.2\bin;C:\Users\BEX Technologies\AppData\Local\Microsoft\WindowsApps;C:\Users\BEX Technologies\AppData\Roaming\npm;C:\Users\BEX Technologies\AppData\Local\Programs\mongosh\;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Users\BEX Technologies\AppData\Local\GitHubDesktop\bin;C:\Users\BEX Technologies\AppData\Local\atom\bin;C:\Program Files\heroku\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\BEX Technologies\AppData\Local\Microsoft\WindowsApps;C:\Users\BEX Technologies\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\LenBex\AppData\Local\Android\Sdk\p;C:\Users\BEX Technologies\AppData\Roaming\nvm;C:\Program Files\mongosh\;C:\Users\BEX Technologies\Ngrok;C:\Users\BEX Technologies\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\BEX Technologies\.bun\bin;C:\Program Files (x86)\cloudflared\;C:\Program Files\Maven\apache-maven-3.9.11\bin;c:\Users\BEX Technologies\.vscode\extensions\vscjava.vscode-java-debug-0.58.3\bundled\scripts\noConfigScripts;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="21.0.6+8-LTS-188"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.telecom.AppTest" time="0.005"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.telecom.AppTest" time="0.002"/>
 </testsuite>
