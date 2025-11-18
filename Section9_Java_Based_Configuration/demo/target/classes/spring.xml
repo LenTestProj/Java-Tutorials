@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- when scope is singleton by default it creates the object dn initial run whereas for scope equal to prototype it creates the object only when you call get Bean method-->
+    <!-- <bean id="alien" class="com.telecom.Alien" scope="prototype"> 
+    </bean> -->
+
+    <!-- <bean id="alien" class="com.telecom.Alien"> 
+        <property name="age" value="24"></property>
+        <property name="lap" ref="lap1"></property>
+    </bean> -->
+
+    <!-- Only if two different types are there in constructor inputs -->
+    <!-- <bean id="alien" class="com.telecom.Alien"> 
+        <constructor-arg type="com.telecom.Laptop" ref="lap1"/>
+        <constructor-arg value="21"/>
+    </bean> -->
+
+    <!-- <bean id="alien" class="com.telecom.Alien"> 
+        <constructor-arg index="1" ref="lap1"/>
+        <constructor-arg index="0" value="21"/>
+    </bean> -->
+
+    <!-- <bean id="alien" class="com.telecom.Alien"> 
+        <constructor-arg name="lap" ref="lap1"/>
+        <constructor-arg name="age" value="21"/>
+    </bean> -->
+
+    <!-- <bean id="alien" class="com.telecom.Alien" autowire="byName">   -->
+    <bean id="alien" class="com.telecom.Alien" autowire="byType">    
+        <property name="age" value="24" />
+        <property name="com" ref="com" />
+        <!-- this will prefer com1 rather than autowire which will look for com -->
+    </bean>
+
+    <!-- Primary is used for auto wiring to decide which bean to select if byType is selected -->
+    <bean id="com1" class="com.telecom.Laptop" primary="true">
+    </bean>
+
+    <bean id="com" class="com.telecom.Desktop" lazy-init="true">
+    </bean>
+
+</beans>
