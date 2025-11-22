@@ -1,5 +1,8 @@
 package com.telecom.SpringJDBCEx.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.telecom.SpringJDBCEx.model.Student;
@@ -13,11 +16,16 @@ public class StudentService {
         return repo;
     }
 
+    @Autowired
     public void setRepo(StudentRepo repo) {
         this.repo = repo;
     }
 
     public void addStudent(Student s){
-        repo.sa
+        repo.save(s);
+    }
+
+    public List<Student> getStudents(){
+        return repo.findAll();
     }
 }
