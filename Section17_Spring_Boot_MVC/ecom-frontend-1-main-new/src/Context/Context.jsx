@@ -1,5 +1,6 @@
 import axios from "../axios";
 import { useState, useEffect, createContext } from "react";
+// import API from "../axios"; 
 
 const AppContext = createContext({
   data: [],
@@ -8,15 +9,14 @@ const AppContext = createContext({
   addToCart: (product) => {},
   removeFromCart: (productId) => {},
   refreshData:() =>{},
-  updateStockQuantity: (productId, newQuantity) =>{}
-  
+  updateStockQuantity: (productId, newQuantity) =>{}  
 });
 
 export const AppProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [isError, setIsError] = useState("");
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
-
+  const baseUrl = "http://localhost:8080";
 
   const addToCart = (product) => {
     const existingProductIndex = cart.findIndex((item) => item.id === product.id);
@@ -45,7 +45,7 @@ export const AppProvider = ({ children }) => {
 
   const refreshData = async () => {
     try {
-      const response = await axios.get("/products");
+      const response = await axios.get(`${baseUrl}/api/products`);
       setData(response.data);
     } catch (error) {
       setIsError(error.message);
