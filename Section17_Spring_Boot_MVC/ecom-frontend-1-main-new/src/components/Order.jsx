@@ -13,6 +13,7 @@ const Order = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(`${baseUrl}/api/orders`);
+        console.log("order response ",response.data)
         setOrders(response.data);
         setLoading(false);
       } catch (error) {

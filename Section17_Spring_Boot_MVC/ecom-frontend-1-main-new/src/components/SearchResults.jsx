@@ -21,7 +21,7 @@ const SearchResults = () => {
 
   // Function to convert base64 string to data URL
     const convertBase64ToDataURL = (base64String, mimeType = 'image/jpeg') => {
-      if (!base64String) return unplugged; // Return fallback image if no data
+      if (!base64String) return null; // Return fallback image if no data
       
       // If it's already a data URL, return as is
       if (base64String.startsWith('data:')) {

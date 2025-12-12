@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 const Navbar = ({ onSelectCategory }) => {
   const getInitialTheme = () => {
     const storedTheme = localStorage.getItem("theme");
