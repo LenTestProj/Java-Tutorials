@@ -1,0 +1,11 @@
+1. docker ps - shows all the containers
+2. docker ps -a  - container that were used earlier with more detials
+3. docker images - docker images
+4. docker rm <containerId> - remove container
+5. docker rmi <imageId> - remove image. (first remove container Id then remove image)
+6. docker create <image-name> - create a docker container
+7. docker search hello-world - seaches for the image "hello-world" in the images registry
+8. docker pull hello-world - pull the image hello-world from the registry
+9. docker pause <containerId> - pause a container
+10. docker stop <containerId> - stop a container
+11/ docker run -it <image-name>:<image-tag> - run interactive image without stopping
