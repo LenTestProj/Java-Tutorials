@@ -8,4 +8,8 @@
 8. docker pull hello-world - pull the image hello-world from the registry
 9. docker pause <containerId> - pause a container
 10. docker stop <containerId> - stop a container
-11/ docker run -it <image-name>:<image-tag> - run interactive image without stopping
+11. docker run -it <image-name>:<image-tag> - run interactive image without stopping
+12. docker commit <containerId> image-name - create a new iamge
+13. docker commit --change='CMD ["java","-jar","/tmp/rest-demo.jar"]' practical_fermat telecom/rest-demo:v2 - create an image but run the change CMD to run the java jar file inside the container when the container runs
+
+14. docker build -t telecom/rest-demo:v3 . - create an iamge provide image name and "." refers to the current directory
