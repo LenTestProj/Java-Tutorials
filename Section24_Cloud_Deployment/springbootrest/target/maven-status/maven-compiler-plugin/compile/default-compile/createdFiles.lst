@@ -1,0 +1,5 @@
+com\telecom\springbootrest\model\JobPost.class
+com\telecom\springbootrest\repo\JobRepo.class
+com\telecom\springbootrest\SpringbootrestApplication.class
+com\telecom\springbootrest\service\JobService.class
+com\telecom\springbootrest\controller\JobRestController.class
