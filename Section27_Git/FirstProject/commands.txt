@@ -1,0 +1,3 @@
+1. git init -m main //git repository with branch as main not master
+
+2. 
