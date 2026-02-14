@@ -3,16 +3,19 @@ package com.telecom.question_service.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.telecom.question_service.model.Question;
+import com.telecom.question_service.model.QuestionWrapper;
+import com.telecom.question_service.model.Response;
 import com.telecom.question_service.service.QuestionService;
 
 @RestController
@@ -21,6 +24,9 @@ public class QuestionController {
     
     @Autowired
     QuestionService questionService;
+
+    @Autowired
+    Environment environment;
 
     @GetMapping("allQuestions")
     public ResponseEntity<List<Question>> getAllQuestions(){
@@ -38,7 +44,23 @@ public class QuestionController {
     }
 
     //generate
+    @GetMapping("generate")
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryName, @RequestParam Integer numQuestions){
+        return questionService.getQuestionsForQuiz(categoryName, numQuestions);
+    }
+
     //getQuestions (questionId)
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
+        System.out.println(environment.getProperty("local.server.port"));
+        return questionService.getQuestionsFromId(questionIds);
+    }
+
+
     //getScore
+    @PostMapping("getScore")
+    public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses){
+        return questionService.getScore(responses);
+    }
 
 }

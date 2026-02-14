@@ -1,10 +1,8 @@
-package com.telecom.question_service.model;
+package com.telecom.quiz_service.model;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 public class QuestionWrapper {
     private Integer id;
     private String questionTitle;
