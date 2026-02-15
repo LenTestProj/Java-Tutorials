@@ -1,1 +1,5 @@
-hello world!!
+hello world !!!!
+take input form user
+and the values
+
+submit data to database

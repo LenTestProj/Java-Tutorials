@@ -1,3 +1,5 @@
 1. git init -m main //git repository with branch as main not master
 
-2. 
+2.git diff --staged //check changes in staged 
+
+3. git diff - //check changes in modified files
