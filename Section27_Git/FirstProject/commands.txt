@@ -3,3 +3,5 @@
 2.git diff --staged //check changes in staged 
 
 3. git diff - //check changes in modified files
+
+4. git log --graph //shows the graph of git branches
