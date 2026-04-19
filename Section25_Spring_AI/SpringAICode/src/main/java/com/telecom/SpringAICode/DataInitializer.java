@@ -19,7 +19,7 @@ public class DataInitializer {
     @Autowired
     private VectorStore vectorStore;
 
-    @PostConstruct //inititalized when you start the project
+    // @PostConstruct //inititalized when you start the project
     public void initData(){
         TextReader textReader = new TextReader(new ClassPathResource("product_details.txt"));
 
