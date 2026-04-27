@@ -6,9 +6,13 @@ import org.springframework.ai.image.ImageResponse;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiImageModel;
 import org.springframework.ai.openai.OpenAiImageOptions;
+import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 public class ImageGenController {
@@ -37,4 +41,16 @@ public class ImageGenController {
 
         return response.getResult().getOutput().getUrl();
     }
+
+
+    @PostMapping("image/describe")
+    public String descImage(@RequestParam String query, @RequestParam MultipartFile file){
+        return chatClient.prompt()
+        .user(us -> us.text(query)
+        .media(MimeTypeUtils.IMAGE_JPEG,file.getResource()))
+        .call()
+        .content();
+    }
+
+
 }
