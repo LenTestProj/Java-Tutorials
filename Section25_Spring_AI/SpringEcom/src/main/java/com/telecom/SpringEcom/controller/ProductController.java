@@ -1,7 +1,7 @@
-package com.telusko.SpringEcom.controller;
+package com.telecom.SpringEcom.controller;
 
-import com.telusko.SpringEcom.model.Product;
-import com.telusko.SpringEcom.service.ProductService;
+import com.telecom.SpringEcom.model.Product;
+import com.telecom.SpringEcom.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +45,25 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @PostMapping("/product/generate-description")
+    public ResponseEntity<String> generateDescription(@RequestParam String name, @RequestParam String category){
+        try {
+            String aiDesc = productService.generateDescription(name,category);
+            return new ResponseEntity<>(aiDesc, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/product/generate-image")
+    public ResponseEntity<byte[]> generateImage(@RequestParam String name, @RequestParam String category, @RequestParam String description ){
+        try {
+            byte[] aiImage = productService.generateImage(name,category, description);
+            return new ResponseEntity<>(aiImage, HttpStatus.OK);
+        } catch (Exception e) {
+           return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @PostMapping("/product")
     public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile){

@@ -104,7 +104,7 @@ The system follows a multi-layered monolithic architecture adhering to enterpris
 
 ## 📂 Folder Structure (Backend)
 ```plaintext
-com.telusko.springecom
+com.telecom.springecom
 ├── controller                # REST controllers (ProductController)
 ├── service                   # Service layer interfaces and implementations
 ├── repository                # Spring Data JPA repositories
